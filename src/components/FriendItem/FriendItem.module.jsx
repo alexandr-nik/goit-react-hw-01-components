@@ -1,14 +1,6 @@
 import styled from 'styled-components';
 
-export const FriendList = styled.ul`
-  background-color: #e7ecf2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  padding-bottom: 20px;
-`;
-export const FriendItem = styled.li`
+export const FriendItemLi = styled.li`
   display: flex;
   align-items: center;
   width: 300px;

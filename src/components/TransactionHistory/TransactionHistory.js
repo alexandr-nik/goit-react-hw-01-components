@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types';
+import { TransactionList } from '../TransactionList';
 import {
   SectonTransaction,
   Table,
   THead,
   TBody,
-  Td,
   Th,
-  TrList,
   TrHead,
 } from './TransactionHistory.module';
 export const TransactionHistory = ({ transactions }) => {
@@ -22,7 +21,7 @@ export const TransactionHistory = ({ transactions }) => {
         </THead>
         <TBody>
           {transactions.map(item => (
-            <Transaction key={item.id} item={item} />
+            <TransactionList key={item.id} item={item} />
           ))}
         </TBody>
       </Table>
@@ -30,16 +29,6 @@ export const TransactionHistory = ({ transactions }) => {
   );
 };
 
-function Transaction({ item }) {
-  const { amount, type, currency } = item;
-  return (
-    <TrList>
-      <Td>{type}</Td>
-      <Td>{amount}</Td>
-      <Td>{currency}</Td>
-    </TrList>
-  );
-}
 TransactionHistory.propTypes = {
   transactions: PropTypes.arrayOf(
     PropTypes.shape({
