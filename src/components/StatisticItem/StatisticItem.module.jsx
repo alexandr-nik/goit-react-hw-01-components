@@ -12,6 +12,7 @@ export const StatLable = styled.span`
   font-weight: 400;
   line-height: 1.16;
   padding: 5px;
+  color: white;
 `;
 export const StatPersent = styled.span`
   text-align: center;
@@ -19,4 +20,5 @@ export const StatPersent = styled.span`
   font-weight: 400;
   line-height: 1.16;
   padding: 10px;
+  color: white;
 `;
