@@ -4,7 +4,11 @@ import { FriendListUl } from './FriendList.module';
 
 export const FriendList = ({ friends }) => {
   return (
-    <FriendListUl>{friends.map(item => FriendItem({ item }))}</FriendListUl>
+    <FriendListUl>
+      {friends.map(item => (
+        <FriendItem key={item.id} item={item} />
+      ))}
+    </FriendListUl>
   );
 };
 

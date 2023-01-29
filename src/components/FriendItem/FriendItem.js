@@ -6,9 +6,9 @@ import {
 } from './FriendItem.module';
 
 export const FriendItem = ({ item }) => {
-  const { avatar, name, isOnline, id } = item;
+  const { avatar, name, isOnline } = item;
   return (
-    <FriendItemLi key={id}>
+    <FriendItemLi>
       <FriendSpan value={isOnline} />
       <FriendImg src={avatar} alt={name} width="48px" />
       <FriendName>{name}</FriendName>
